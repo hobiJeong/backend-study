@@ -3,12 +3,10 @@
 const express = require("express");
 const router = express.Router(); //app이 아닌 router로 선언. express.Router()를 불러와줌.
 
-router.get("/", (req, res) => {
-    res.render("home/index");
-}); // render를 통해 index.ejs를 루트경로에 들어 왔을때 띄워줌. login도 동일.
+const ctrl = require("./home.ctrl"); // home.ctrl에서 export 한 것을 ctrl로 받아줌.
 
-router.get("/login", (req, res) => {
-    res.render("home/login");
-});
+router.get("/", ctrl.home); // ctrl의 hello 함수를 콜백 login도 동일. 
+
+router.get("/login", ctrl.login);
 
 module.exports = router;

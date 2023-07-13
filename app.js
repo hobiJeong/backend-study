@@ -15,6 +15,4 @@ app.set("view engine", "ejs"); //html코드 해석할 엔진을 ejs로 사용.
 
 app.use("/", home); // use -> 미들 웨어를 등록해주는 메서드. 루트 경로로 들어오면 home으로 이동.
 
-app.listen(PORT, () => {
-    console.log("서버 가동");
-});
+module.exports = app;

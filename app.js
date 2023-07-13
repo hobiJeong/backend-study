@@ -1,7 +1,10 @@
 "use strict";
 
+// 모듈
 const express = require("express");
 const app = express();
+
+const PORT = 3000;
 
 // 라우팅
 const home = require("./routes/home"); // home이라는 경로의 index.js 파일을 읽어줌.
@@ -12,6 +15,6 @@ app.set("view engine", "ejs"); //html코드 해석할 엔진을 ejs로 사용.
 
 app.use("/", home); // use -> 미들 웨어를 등록해주는 메서드. 루트 경로로 들어오면 home으로 이동.
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("서버 가동");
 });

@@ -5,9 +5,7 @@ const router = express.Router(); //app이 아닌 router로 선언. express.Route
 
 const ctrl = require("./home.ctrl"); // home.ctrl에서 export 한 것을 ctrl로 받아줌.
 
-router.get("/", ctrl.home); // ctrl의 hello 함수를 콜백 login도 동일. 
-
-router.post("/post", ctrl.post);
+router.get("/", ctrl.home); // ctrl의 home 함수를 콜백 login도 동일. 
 
 router.get("/login", ctrl.login);
 

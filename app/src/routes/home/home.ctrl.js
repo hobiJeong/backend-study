@@ -1,6 +1,6 @@
 "use strcit";
 
-const UserStorage = require("../../models/UserStorage");
+const User = require("../../models/User");
 
 const output = {
     home: (req, res) => {
@@ -13,23 +13,11 @@ const output = {
 
 const process = {
     login: (req, res) => {
-        const id = req.body.id,
-            psword = req.body.psword;
-
-        const users = UserStorage.getUsers("id", "psword");
-
-        const response = {};
-        if (users.id.includes(id)) {
-            const idx = users.id.indexOf(id);
-            if (users.psword[idx] === psword) {
-                response.success = true;
-                return res.json(response);
-            }
-        }
+        const user = new User(req.body); // 1
+        const response = user.login(); // 4 , 13
+        console.log(response);
+        return res.json(response); // 14
         
-        response.success = false;
-        response.msg = "로그인에 실패하셨습니다";
-        return res.json(response);
     },
 };
  

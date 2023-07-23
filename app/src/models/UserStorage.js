@@ -8,16 +8,25 @@ class UserStorage {
     };
 
     static getUsers(...fields) {
-        const users = this.#users;
-        const newUsers = fields.reduce((newUsers, field) => {
+        const users = this.#users; //7
+        const newUsers = fields.reduce((newUsers, field) => { //8
             if (users.hasOwnProperty(field)) {
                 newUsers[field] = users[field];
-                console.log(field);
             }
-            return newUsers;
+            return newUsers; //9
         }, {});
-        console.log(newUsers);
-        return newUsers;
+        return newUsers; //10
+    }
+
+    static getUserInfo(id) {
+        const users = this.#users;
+        const idx = users.id.indexOf(id);
+        const usersKeys = Object.keys(users);
+        const userInfo = usersKeys.reduce((newUser, info) => {
+            newUser[info] = users[info][idx];
+            return newUser;    
+        }, {});  
+        return userInfo;
     }
 }
 

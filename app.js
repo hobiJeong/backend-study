@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // 라우팅
-const home = require("./routes/home"); // home이라는 경로의 index.js 파일을 읽어줌.
+const home = require("./routes/home"); // home이라는 경로의 index.js 파일을 읽어줌.dd
 
 // 앱 세팅
 app.set("views", "./views"); //화면 뷰를 관리해줄 파일이 저장될 폴더를 두번째 파라미터로 ./views

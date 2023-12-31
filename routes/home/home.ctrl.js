@@ -10,7 +10,6 @@ const login = (req, res) => {
 
 const post = (req, res) => {
     console.log(req);
-    
 }
 
 module.exports = {

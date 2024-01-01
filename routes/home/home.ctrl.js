@@ -6,6 +6,7 @@ const home = (req, res) => {
 
 const login = (req, res) => {
     res.render("home/login");
+    
 };
 
 const post = (req, res) => {

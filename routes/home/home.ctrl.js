@@ -12,6 +12,7 @@ const post = (req, res) => {
     console.log(req);
 }
 
+
 module.exports = {
     home,
     login,

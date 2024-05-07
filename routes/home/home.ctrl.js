@@ -4,7 +4,7 @@ const home = (_req, res) => {
     res.render("home/index");
 };
 
-const login = (req, res) => {
+const login = (_req, res) => {
     res.render("home/login");
 };
 

@@ -8,7 +8,7 @@ const login = (_req, res) => {
     res.render("home/login");
 };
 
-const post = (req, res) => {
+const post = (req, _res) => {
     console.log(req);
 }
 

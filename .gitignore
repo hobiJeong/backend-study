@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 622336f7662e287b4815d54dfaf7fa846f0b45a0
 # Logs
 logs
 *.log
@@ -129,4 +132,8 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
+<<<<<<< HEAD
 .pnp.*
+=======
+.pnp.*
+>>>>>>> 622336f7662e287b4815d54dfaf7fa846f0b45a0

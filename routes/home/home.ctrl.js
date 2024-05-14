@@ -8,8 +8,7 @@ const login = (_req, res) => {
     res.render("home/login");
 };
 
-const post = (req, _res) => {
-}
+const post = (req, _res) => {}
 
 module.exports = {
     home,

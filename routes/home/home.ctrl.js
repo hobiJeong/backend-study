@@ -9,7 +9,6 @@ const login = (_req, res) => {
 };
 
 const post = (req, _res) => {
-    
 }
 
 module.exports = {
